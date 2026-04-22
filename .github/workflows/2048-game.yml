@@ -7,7 +7,7 @@ on:
       - main
 
 env:
-  IMAGE_NAME: "${{ secrets.DOCKER_USER }}/2048-Alzena"
+  IMAGE_NAME: "${{ secrets.DOCKER_USER }}/2048-alzena"
   DOCKER_USER: "${{ secrets.DOCKER_USER }}"
 
 jobs:

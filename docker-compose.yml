@@ -1,5 +1,5 @@
 services:
   web:
-    image: ${DOCKER_USER}/2048-Alzena
+    image: ${DOCKER_USER}/2048-alzena
     ports:
       - "9999:80"
