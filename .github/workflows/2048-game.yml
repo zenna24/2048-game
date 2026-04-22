@@ -5,8 +5,8 @@ on:
     branches:
       - main
 env:
-  IMAGE_NAME: "${{ secrets.zezen24 }}/2048-alzena"
-  DOCKER_USER: "${{ secrets.zezen24 }}"
+  IMAGE_NAME: "${{ secrets.DOCKER_USER }}/2048-alzena"
+  DOCKER_USER: "${{ secrets.DOCKER_USER }}"
 jobs:
   build-push-image:
     runs-on: self-hosted
@@ -20,8 +20,8 @@ jobs:
       - name: Login to Docker Registry
         uses: docker/login-action@v3
         with:
-          username: ${{ secrets.zezen24 }}
-          password: ${{ secrets.DOCKER_alzena24082009}}
+          username: ${{ secrets.DOCKER_USER }}
+          password: ${{ secrets.DOCKER_PASS}}
       - name: Push Image
         run: docker push $IMAGE_NAME
 
